@@ -1,5 +1,13 @@
 # Android-Interview-Question
 
+
+## What is Android ?
+
+1. Android is mobile platform it consist of linux operating system , middleware and key Application
+2. By Google **Android is an open source , linux based software stack created for  wide array of devices and form factors**
+
+
+
 ## Android Components
 ### Explain briefly all the Android application components
 
