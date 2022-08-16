@@ -44,3 +44,56 @@ An **activity** provides the window in which the app draws its UI. This window t
  >*Note - The onCreate() and onDestroy() methods are called only once throughout the activity lifecycle.
 
 
+
+### Uses case of activity lifecycle with execution order
+
+##### **When activity is opened:**
+```kotlin
+onCreate()
+
+onStart()
+
+onResume()
+```
+##### **When moved to another activity:**
+> Here A == first activity and B == second activity
+
+```kotlin
+onPause() - (A)
+
+onCreate() - (B)
+
+onStart() - (B)
+
+onResume() - (B)
+
+onStop() - (A)
+```
+
+##### **When another activity is closed and moving back to first activity:**
+
+```kotlin
+onPause() - (B)
+
+onRestart() - (A)
+
+onStart() - (A)
+
+onResume() - (A)
+
+onStop() - (B)
+
+onDestroy() - (B)
+```
+
+### onStart vs onResume
+**onStart()** -> called when the activity becomes visible, but might not be in the foreground (e.g. an AlertFragment is on top or any other possible use case).
+
+**onResume()** -> called when the activity is in the foreground, or the user can interact with the Activity.
+
+### onPause vs onStop
+**onPause()** -> If you can still see any part of it (Activity coming to foreground either doesn't occupy the whole screen, or it is somewhat transparent).
+
+**onStop()** -> If you cannot see any part of it
+
+
