@@ -26,3 +26,21 @@ There are four different types of app components :
 An **Activity** represent a single screen with a user interface just like window or frame of java .. Android activity is the subclass of context Theme Wrapper Class
 
 An **activity** provides the window in which the app draws its UI. This window typically fills the screen, but may be smaller than the screen and float on top of other windows. Generally, one activity implements one screen in an app. For instance, one of an app’s activities may implement a Preferences screen, while another activity implements a Select Photo screen.
+
+--------------
+## Activity Lifecycle
+### Activity Lifecycle (in execution order) -
+
+| Method  | Called When  |
+|---|---|
+| onCreate()   | Activity is first created.  |
+| onStart()    | Activity is becoming visible to the user.  |
+| onResume()   | Activity will start interacting with the user.  |
+| onPause()    | Activity is not interactable to the user.  |
+| onStop()     | Activity is no longer visible to the user.  |
+| onRestart()  | After activity is stopped, prior to start.  |
+| onDestroy()  | Before activity is destroyed.  |
+
+ >*Note - The onCreate() and onDestroy() methods are called only once throughout the activity lifecycle.
+
+
