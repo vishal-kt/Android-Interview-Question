@@ -117,6 +117,11 @@ This file contains information about our application such as the Android version
 states package for Kotlin file, and other application components. It acts as an intermediator between android OS and our application.
 
  **Java folder** contains all the java and Kotlin source code (.java) files that we create during the app development, including other Test files.
+**res/drawable folder**
+It contains the different types of images used for the development of the application. We need to add all the images in a drawable folder for the application development.
+ 
 
+**res/layout folder**
+The layout folder contains all XML layout files which we used to define the user interface of our application. It contains the activity_main.xml file.
 
 
