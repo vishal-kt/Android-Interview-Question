@@ -172,3 +172,16 @@ this context is used when u are passing context in the scope of activity or u ne
  Always try to use the nearest context which is available to you. When you are in Activity, the nearest context is Activity context. When you are in Application, the nearest context is the Application context. If Singleton, use the Application Context. \
  
  Context directly available to you from the enclosing component you’re working within. You can safely hold a reference to it as long as that reference does not extend beyond the lifecycle of that component. As soon as you need to save a reference to a Context from an object that lives beyond your Activity or Service, even temporarily, switch that reference you save over to the application context.
+ 
+ ## What is Application Class 
+ 
+  Application class in Android is the base class within an Android app that contains all other components such as activities and services. 
+  The Application class, or any subclass of the Application class, is instantiated before any other class when the process for your application/package is created.
+  
+  ## Why we need to call setContentView() in onCreate() of Activity class..
+  because OnCreate() method is called only once in the activity life cycle we do all the initialization related task there
+  
+  ## When only onDestroy is called for an activity without onPause() and onStop()?
+   When we call Finish() method inside  onCreate() method in that case onDestroy is directly called 
+  
+  
