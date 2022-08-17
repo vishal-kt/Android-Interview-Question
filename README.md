@@ -116,5 +116,7 @@ Manifests folder contains AndroidManifest.xml for our creating the android appli
 This file contains information about our application such as the Android version, metadata, 
 states package for Kotlin file, and other application components. It acts as an intermediator between android OS and our application.
 
+ **Java folder** contains all the java and Kotlin source code (.java) files that we create during the app development, including other Test files.
+
 
 
