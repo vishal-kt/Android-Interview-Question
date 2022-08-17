@@ -185,3 +185,8 @@ this context is used when u are passing context in the scope of activity or u ne
    When we call Finish() method inside  onCreate() method in that case onDestroy is directly called 
   
   
+  ** What is onSavedInstanceState() and onRestoreInstanceState() in activity? **
+  
+ onSavedInstanceState() - This method is used to store data before pausing the activity.
+ onRestoreInstanceState() - This method is used to recover the saved state of an activity when the activity is recreated after destruction. So, the onRestoreInstanceState() receive the bundle that contains the instance state information.
+  
