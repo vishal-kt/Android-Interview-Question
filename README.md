@@ -137,6 +137,6 @@ Gradle means automated build system and it contains a number of files that are u
 
 ## CONTEXT 
 
-** What is Context ** \
+**What is Context** \
 The Context in Android is actually the context of what we are talking about and where we are currently present.
 
