@@ -100,3 +100,4 @@ onDestroy() - (B)
 **onStop()** -> If you cannot see any part of it
 
 
+#### **What is the project structure of an Android Application? **
