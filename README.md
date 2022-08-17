@@ -165,5 +165,10 @@ Register BroadcastReceiver  \
 
 This Context is available in an activity  . this context is tied to the lifecycle of activity ..
 this context is used when u are passing context in the scope of activity or u need context whoes lifecycle is attached to the current context  \
- If you have to create an object whose lifecycle is attached to an activity, you can use the activity context.
-
+ If you have to create an object whose lifecycle is attached to an activity, you can use the activity context. \
+ Whenever you are in Activity, for any UI operations like showing toast, dialogs, and etc, use the Activity Context.
+ 
+ 
+ Always try to use the nearest context which is available to you. When you are in Activity, the nearest context is Activity context. When you are in Application, the nearest context is the Application context. If Singleton, use the Application Context. \
+ 
+ Context directly available to you from the enclosing component you’re working within. You can safely hold a reference to it as long as that reference does not extend beyond the lifecycle of that component. As soon as you need to save a reference to a Context from an object that lives beyond your Activity or Service, even temporarily, switch that reference you save over to the application context.
