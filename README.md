@@ -163,6 +163,7 @@ Register BroadcastReceiver  \
 
 **Activity Context**
 
+This Context is available in an activity  . this context is tied to the lifecycle of activity ..
+this context is used when u are passing context in the scope of activity or u need context whoes lifecycle is attached to the current context  \
+ If you have to create an object whose lifecycle is attached to an activity, you can use the activity context.
 
-
- 
