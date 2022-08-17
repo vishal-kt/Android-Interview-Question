@@ -189,4 +189,8 @@ this context is used when u are passing context in the scope of activity or u ne
   
  onSavedInstanceState() - This method is used to store data before pausing the activity.
  onRestoreInstanceState() - This method is used to recover the saved state of an activity when the activity is recreated after destruction. So, the onRestoreInstanceState() receive the bundle that contains the instance state information.
+ 
+ ## 5 Anti  Common Android Anti-Patterns
+ Using Base Class -- using base class cauases tight coupling ,instead use extension function  \
+ Putting all dependencies in AppModule: Hard to read and during testing, we can't get the specific module \
   
