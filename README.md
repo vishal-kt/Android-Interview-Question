@@ -141,9 +141,17 @@ Gradle means automated build system and it contains a number of files that are u
 The Context in Android is actually the context of what we are talking about and where we are currently present. \
 It is the context of current state of application \
 It can be used to get the information regarding application and activity \
-It can be used to get the access of resources , databases and shared prefrences \
+It can be used to get the access of resources , databases and shared preferences \
 Both the Activity and Application class extends the Context class
 
 
-**There are Two types of context**
+**There are Two types of context** \
+**Application Context**
+This Context is tied to the Lifecycle of an Application. \
+Mainly it is an instance that is a singleton and can be accessed via getApplicationContext() \
+ **USE CASE of Application Context** \
+ 
+when you have to create a singleton object for your application and that object needs a context, always pass the application context. \
+when you have to initialize a library in an activity, always pass the application context, not the activity context.
+
  
