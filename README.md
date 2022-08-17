@@ -169,7 +169,7 @@ this context is used when u are passing context in the scope of activity or u ne
  Whenever you are in Activity, for any UI operations like showing toast, dialogs, and etc, use the Activity Context.
  
  
- Always try to use the nearest context which is available to you. When you are in Activity, the nearest context is Activity context. When you are in Application, the nearest context is the Application context. If Singleton, use the Application Context. \
+ Always try to use the nearest context which is available to you. When you are in Activity, the nearest context is Activity context. When you are in Application, the nearest context is the Application context. If Singleton, use the Application Context. 
  
  Context directly available to you from the enclosing component you’re working within. You can safely hold a reference to it as long as that reference does not extend beyond the lifecycle of that component. As soon as you need to save a reference to a Context from an object that lives beyond your Activity or Service, even temporarily, switch that reference you save over to the application context.
  
@@ -193,4 +193,16 @@ this context is used when u are passing context in the scope of activity or u ne
  ## 5 Anti  Common Android Anti-Patterns
  Using Base Class -- using base class cauases tight coupling ,instead use extension function  \
  Putting all dependencies in AppModule: Hard to read and during testing, we can't get the specific module \
+ Use Fragment Instead of One activity per screen \
+ Hardcoding dispatchers: It forces the coroutine to use the particular dispatcher whereas in testing we need to pass the test dispatcher \
+ Using GlobalScope: Its keeps running during the application process and doesn't care about the lifecycle of the component which causes memory leak or dead object exception.
+ 
+ 
+ ## 6 Design pattern every android developer must know
+- Singleton
+- Factory
+- Builder
+- Facade
+- Dependency Injection
+- Adapter
   
