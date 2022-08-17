@@ -155,11 +155,11 @@ Mainly it is an instance that is a singleton and can be accessed via getApplicat
 when you have to create a singleton object for your application and that object needs a context, always pass the application context. \
 when you have to initialize a library in an activity, always pass the application context, not the activity context. \
 
-Load Resource Values \ 
-Start a Service \ 
-Bind to a Service \ 
-Send a Broadcast \ 
-Register BroadcastReceiver \ 
+Load Resource Values  \ 
+Start a Service  \ 
+Bind to a Service  \ 
+Send a Broadcast  \ 
+Register BroadcastReceiver  \ 
 
 **Activity Context**
 
