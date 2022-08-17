@@ -124,4 +124,12 @@ It contains the different types of images used for the development of the applic
 **res/layout folder**
 The layout folder contains all XML layout files which we used to define the user interface of our application. It contains the activity_main.xml file.
 
+**res/mipmap folder**
+This folder contains launcher.xml files to define icons that are used to show on the home screen. It contains different density types of icons depending upon the size of the device such as hdpi, mdpi, xhdpi.
+ 
 
+**res/values folder**
+Values folder contains a number of XML files like strings, dimensions, colors, and style definitions. One of the most important files is the strings.xml file which contains the resources. 
+
+**Gradle Scripts folder**
+Gradle means automated build system and it contains a number of files that are used to define a build configuration that can be applied to all modules in our application. In build.gradle (Project) there are buildscripts and in build.gradle (Module) plugins and implementations are used to build configurations that can be applied to all our application modules
