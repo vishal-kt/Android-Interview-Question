@@ -135,8 +135,8 @@ Values folder contains a number of XML files like strings, dimensions, colors, a
 Gradle means automated build system and it contains a number of files that are used to define a build configuration that can be applied to all modules in our application. In build.gradle (Project) there are buildscripts and in build.gradle (Module) plugins and implementations are used to build configurations that can be applied to all our application modules, we define all the dependency here ..
 
 
-##CONTEXT 
+## CONTEXT 
 
-** What is Context ** <\br>
+** What is Context ** \
 The Context in Android is actually the context of what we are talking about and where we are currently present.
 
