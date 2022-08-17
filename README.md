@@ -100,5 +100,5 @@ onDestroy() - (B)
 **onStop()** -> If you cannot see any part of it
 
 
-## What is the project structure of an Android Application? <img align="right" width="306px" src="https://github.com/tech-deity/tech-deity/blob/main/PicsArt_03-17-02.10.35.png" />
+## What is the project structure of an Android Application? <img align="right" width="306px" src="https://github.com/tech-deity/Android-Interview-Question/blob/main/android_app_project_folder_structure.png" />
 
