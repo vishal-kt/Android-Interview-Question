@@ -102,3 +102,19 @@ onDestroy() - (B)
 
 ## What is the project structure of an Android Application? <img align="right" width="306px" src="https://github.com/tech-deity/Android-Interview-Question/blob/main/android_app_project_folder_structure.png" />
 
+
+A project in Android Studio contains everything that defines your workspace for an app, from source code and assets, to test code and build configurations.
+The android project contains different types of app modules, source code files, and resource files..
+
+**Module**
+A module is a collection of source files and build settings that allow you to divide your project into discrete units of functionality. 
+Your project can have one or many modules, and one module may use another module as a dependency.
+You can independently build, test, and debug each module.
+
+**manifests**
+Manifests folder contains AndroidManifest.xml for our creating the android application. 
+This file contains information about our application such as the Android version, metadata, 
+states package for Kotlin file, and other application components. It acts as an intermediator between android OS and our application.
+
+
+
