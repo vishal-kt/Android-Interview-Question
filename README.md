@@ -90,8 +90,11 @@ onDestroy() - (B)
 **onStart()** -> called when the activity becomes visible, but might not be in the foreground (e.g. an AlertFragment is on top or any other possible use case).
 
 suppose there are two activities when app starts and first activity open ... oncreate()...onStrart()...OnResume()...when we click on button to move second activity
-...onPause()firstActivity .....and second activities ...onCreate()..onStart()..onResume()..and for firstActivity..onStop()...when we click on back button
+...onPause()firstActivity .....and second activities ...onCreate()..onStart()..onResume()..and for firstActivity..onStop()...when we click on back button \
 onPause()for second activity get called ... then for first Activity.. onRestart()..onStart()...onResume()....then onStop()...and ... onDestroy()for second Activity
+
+
+**when We click on lock screen button what happen to the activity life cycle**
 
 ### **What is the project structure of an Android Application?**
 
