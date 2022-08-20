@@ -93,10 +93,20 @@ suppose there are two activities when app starts and first activity open ... onc
 ...onPause()firstActivity .....and second activities ...onCreate()..onStart()..onResume()..and for firstActivity..onStop()...when we click on back button \
 onPause()for second activity get called ... then for first Activity.. onRestart()..onStart()...onResume()....then onStop()...and ... onDestroy()for second Activity
 
+**When We click on lock screen button what happen to the activity life cycle**
 
-**when We click on lock screen button what happen to the activity life cycle**
+when we click on lock screen button ...first there is onCreate()...onStart()...onResume()... then we click on screen lock button .. onPasuse()...onStop().. if we open our phone screen it will be back to onRestart()...onStart()...onResume()... \
+
+**When We click on  Home button what happen to the activity life cycle**
+
+first our app  onCreate()...onStart()...onResume()... when we click on  Home Button onPause()...onStop()... when we go back to the app ..onRestart()...onStart()...onResume()   \
+
+**when we kill the app**
+first our app  onCreate()...onStart()...onResume()...when we kill the app onPause()..onStop()..onDestroy()..  \
+
 
 ### **What is the project structure of an Android Application?**
+
 
 
 **onResume()** -> called when the activity is in the foreground, or the user can interact with the Activity.
