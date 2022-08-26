@@ -235,5 +235,10 @@ this context is used when u are passing context in the scope of activity or u ne
  **Separation of concerns ** \
  separating a computer program into distinct sections. Each section addresses a separate concern like UI-based classes should only contain logic that handles UI and operating system interactions , business logic vlass should care about there concerns and data logics should concern to data . \
  
+ **Drive UI from data models ** \
+ drive your UI from data models, preferably persistent models. Data models represent the data of an app. They're independent from the UI elements and other components in your app.  \
+
+
+ 
 
   
