@@ -261,6 +261,40 @@ https://developer.android.com/topic/architecture
 ## Solid Principle 
 https://medium.com/@asheshb/programming-principles-android-app-architecture-by-example-part-2-5-41d87eaf30bf
 
+**Single Responsibility Principle (SRP)**
+This principle takes direct guidance from the separation of concerns. A class should be responsible for one thing or we can say that there should be only one reason for it to change. Only one reason because if there are two reasons to change then the probability of an error or instability becomes twice and so on. \
+
+**Open Closed Principle**
+
+A class should be open for extension but closed for modification. 
+
+For example, let’s say we have a ReportWriter class which calls getReportData() function of PdfReport to get the data and print it.It is reasonable to assume that in near future we may need to print the report in text, xml or other formats. When that happens we will have to modify the ReportWriter class to adjust for any new format. That would be a violation of OCP, which says that a class should be closed for modification.
+A better way to make our code future ready is to depend on abstraction.
+We can declare an interface Report and make the concrete class PdfReport implement it. We can pass PdfReport as Report object to the ReportWriter class. This way ReportWriter will depend on abstraction and wouldn’t be concerned with the concrete class which is implementing that interface. \
+
+**Liskov Substitution Principle (LSP)**
+
+A child object should behave like its parent when passed as a parent. Let’s say Class B extends Class A. There is a function which requires Class A object but instead, if we pass Class B object (perfectly legal in object-oriented world) then Class B object should behave like Class A object. \
+
+**Interface Segregation Principle (ISP)**
+Many client specific interfaces are better than one general purpose interface.....
+divide the large single interface into multiple interface and let clients use them. This way clients would know about only those methods which it requires. Remember, separation of concerns?
+
+Now Service class is implementing 3 interfaces instead of a single large interface. Other than that there is no change in Service class but the exposure to clients are now reduced to only those functions they require.   \
+
+**Dependency Inversion Principle (DIP)**
+High-level modules should not depend on low-level modules
+
+A high level class should not depend on low level class and both should depend on abstraction. Before going further let’s see what’s a high/low level class.
+
+An Android app executes inside a boundary. Outside the boundary, there is the Android framework itself, various service manager etc. A class which is closest to the boundary is the lower level class. For example Activity/Fragment get events directly from the Android framework which is outside the boundary so it’s low level class. A low level class is based on implementation/details.
+
+A high level class is more abstract, dealing with business logic (the code specific to your app). High level classes are less dependent on the platform/third party libraries.Let’s say Repository class needs to get data from DB class. Here Repository is a higher level class than DB class because DB class is more dependent on detail (SQLite). Now, Repository class can’t directly depend on DB class as it would be a violation of DIP.
+
+What we do is create an Interface DataInterface which is implemented by DB class and then Repository class uses an object of DataInterface . The data interface is an abstract class and at the same level as Repository so it’s fine for the Repository to depend on it.
+
+Also if we see both Repository and DB class now depend on abstraction. This helps to loosely couple the classes. Another advantage is now that we have DataInterface , a network class can implement it and Repository class (without any modification) would be ready to get data from the network.
+
 
  
 
