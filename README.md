@@ -238,7 +238,21 @@ this context is used when u are passing context in the scope of activity or u ne
  **Drive UI from data models ** \
  drive your UI from data models, preferably persistent models. Data models represent the data of an app. They're independent from the UI elements and other components in your app.  \
 
+Persistent models are ideal for the following reasons:
 
+Your users don't lose data if the Android OS destroys your app to free up resources.
+
+Your app continues to work in cases when a network connection is flaky or not available \
+
+
+**single Source of Truth** \
+single source of truth (SSOT), is the practice of structuring information models and associated schemata such that every data element is stored exactly once.
+
+This pattern brings multiple benefits: \
+
+It centralizes all the changes to a particular type of data in one place. \
+It protects the data so that other types cannot tamper with it. \
+It makes changes to the data more traceable. Thus, bugs are easier to spot. \
  
 
   
