@@ -253,6 +253,12 @@ This pattern brings multiple benefits: \
 It centralizes all the changes to a particular type of data in one place. \
 It protects the data so that other types cannot tamper with it. \
 It makes changes to the data more traceable. Thus, bugs are easier to spot. \
+
+**Unidirectional Data Flow** \
+in Unidirectional data flow state flows in only one direction. The events that modify the data flow in the opposite direction \
+https://developer.android.com/topic/architecture
+
+
  
 
   
