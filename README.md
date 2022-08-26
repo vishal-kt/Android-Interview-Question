@@ -258,6 +258,9 @@ It makes changes to the data more traceable. Thus, bugs are easier to spot. \
 in Unidirectional data flow state flows in only one direction. The events that modify the data flow in the opposite direction \
 https://developer.android.com/topic/architecture
 
+## Solid Principle 
+https://medium.com/@asheshb/programming-principles-android-app-architecture-by-example-part-2-5-41d87eaf30bf
+
 
  
 
