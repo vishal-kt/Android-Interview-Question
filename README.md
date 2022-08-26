@@ -222,4 +222,6 @@ this context is used when u are passing context in the scope of activity or u ne
 - Facade
 - Dependency Injection
 - Adapter
+
+***Android App Architecture*** 
   
