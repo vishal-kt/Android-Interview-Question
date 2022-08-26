@@ -228,8 +228,12 @@ this context is used when u are passing context in the scope of activity or u ne
 -testable \
 -maintainable \
  allows the app to scale, increases the app's robustness, and makes the app easier to test. \
- architecture defines the boundaries between parts of the app and the responsibilities each part should have. \
+ architecture defines the boundaries between parts of the app and the responsibilities each part should have. 
  
  ## principles that architecture follows 
+ 
+ **Separation of concerns ** \
+ separating a computer program into distinct sections. Each section addresses a separate concern like UI-based classes should only contain logic that handles UI and operating system interactions , business logic vlass should care about there concerns and data logics should concern to data . \
+ 
 
   
