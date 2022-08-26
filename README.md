@@ -228,8 +228,8 @@ this context is used when u are passing context in the scope of activity or u ne
 -testable \
 -maintainable \
  allows the app to scale, increases the app's robustness, and makes the app easier to test. \
- architecture defines the boundaries between parts of the app and the responsibilities each part should have.
+ architecture defines the boundaries between parts of the app and the responsibilities each part should have. \
  
- ** principles that architecture follows**
+ ## principles that architecture follows 
 
   
