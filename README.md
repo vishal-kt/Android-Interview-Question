@@ -224,4 +224,9 @@ this context is used when u are passing context in the scope of activity or u ne
 - Adapter
 
 ***Android App Architecture*** 
+-robust
+-testable
+-maintainable
+ allows the app to scale, increases the app's robustness, and makes the app easier to test.
+
   
