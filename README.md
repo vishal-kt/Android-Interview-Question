@@ -361,7 +361,7 @@ class Analytics {
     }
 }
 
-The AnalyticsReporter interface is an abstraction for all reporters, like LogReporter.
+The AnalyticsReporter interface is an abstraction for all reporters, like LogReporter. \
 
 interface AnalyticsReporter {
     fun report(event: String)
