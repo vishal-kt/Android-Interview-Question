@@ -391,4 +391,15 @@ class ApplicationObserver(val analytics: Analytics) : LifecycleObserver {
     }
 }
 
-  
+------------------------------------------- \
+**What is ViewModel **
+ViewModel is life cycle aware component designed to manage and store UI related data in life cycle conscious way.. the view model allow the data to survive configuration changes like screen rotation ,. so in this case the activity is recreated and if we store data in activity it will be lost  so we can use View model to store UI related Data
+
+**LIVEDATA** 
+LiveData is Data holder class and it is used oberver pattern .. it keep its eye on change on particular view and then update the corresponding dchanges 
+if your not using live data in view model then we have to set the new value on config.. changes 
+
+
+
+
+
