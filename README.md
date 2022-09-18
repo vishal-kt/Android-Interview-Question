@@ -295,7 +295,100 @@ What we do is create an Interface DataInterface which is implemented by DB class
 
 Also if we see both Repository and DB class now depend on abstraction. This helps to loosely couple the classes. Another advantage is now that we have DataInterface , a network class can implement it and Repository class (without any modification) would be ready to get data from the network.
 
+**Android ProcessLifecycleOwner**
+Manage life cycle of whole application process , many application changes there behaviour state  when they move from  foreground to background and vice versa ... there are certain application which calculate sessions when the app is in foreground this can be achieved using Android Processlife Cycle Owner class which will keep eye on changes in the state of app and according to that it will behave .  \
 
+To Know when your application in foreground or in background we need  \
+We can use Lifecycle event for it: \
+— when application moved to background ON_STOP event will be triggered \
+— when application moved to foreground ON_START event will be triggered \
+
+class ApplicationObserver(val analytics: Analytics) : LifecycleObserver {
+    
+    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
+    fun onBackground() {
+    }
+    @OnLifecycleEvent(Lifecycle.Event.ON_START)
+    fun onForeground() {
+    }
+}
+
+ The next step is attaching ApplicationObserver to our application. \
+ register it in the application class \
  
+ class MapNotesApp : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        ...
+        val analytics = Analytics()
+        analytics.addReporter(LogReporter())
+        ProcessLifecycleOwner
+            .get()
+            .lifecycle
+            .addObserver(ApplicationObserver(analytics))
+    
+    }
+    ...
+}
+
+The Analytics class allows us to collect session information. \
+class Analytics {
+    private var startSessionTimestamp: Long = -1
+    private val reporters = mutableListOf<AnalyticsReporter>()
+    fun addReporter(reporter: AnalyticsReporter) {
+        reporters.add(reporter)
+    }
+    fun startSession() {
+        startSessionTimestamp = Date().time
+    }
+    fun stopSession() {
+        reportSession()
+        sendAllEvents()
+        startSessionTimestamp = -1
+    }
+    private fun reportSession() {
+        reporters.forEach {reporter ->
+        val currentTime = Date().time
+        // we should check if session was started and stopped correctly
+        val sessionTime = (currentTime - startSessionTimestamp) / 1000
+            reporter.report("Session time: $sessionTime sec" )
+        }
+    }
+    private fun sendAllEvents() {
+        reporters.forEach {reporter ->
+            reporter.sendAllEvents()
+        }
+    }
+}
+
+The AnalyticsReporter interface is an abstraction for all reporters, like LogReporter.
+
+interface AnalyticsReporter {
+    fun report(event: String)
+    fun sendAllEvents()
+}
+class LogReporter : AnalyticsReporter {
+    private val events = mutableListOf<String>()
+    override fun report(event: String) {
+        events.add(event)
+    }
+    override fun sendAllEvents() {
+        events.forEach { event ->
+            Log.d(this.javaClass.simpleName, event)
+        }
+        events.clear()
+    }
+}
+
+class ApplicationObserver(val analytics: Analytics) : LifecycleObserver {
+    @OnLifecycleEvent(Lifecycle.Event.ON_START)
+    fun onForeground() {
+        analytics.startSession()
+    }
+    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
+    fun onBackground() {
+        analytics.stopSession()
+    }
+}
 
   
